@@ -2,6 +2,9 @@ name: End-to-end tests
 on: [push]
 jobs:
   test:
+    strategy:
+      matrix:
+        test-file: [login.cy.js, loginNegativeScenarios.cy.js]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -17,3 +20,4 @@ jobs:
         with:
           config-file: cypress.config.js
           record: false
+          spec: ${{ matrix.test-file }}
