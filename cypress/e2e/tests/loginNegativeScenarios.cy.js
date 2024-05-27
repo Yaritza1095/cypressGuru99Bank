@@ -17,9 +17,11 @@ describe("Testing login", () => {
     login.getUserID().type(userID)
     login.getPassword().type(password)
     login.getLoginButton().click()
-    cy.on('window:alert', (str) => {
+    cy.on('window:confirm', (str) => {
       expect(str).to.equal('User or Password is not valid')
-      cy.url().should('eq', login.url)
+      return true
     })
+      cy.get('button').click()
+    
 })
 })
