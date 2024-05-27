@@ -4,7 +4,7 @@ jobs:
   test:
     strategy:
       matrix:
-        test-file: [/tests/login.cy.js, /tests/loginNegativeScenarios.cy.js]
+        test-file: [cypress/e2e/tests/login.cy.js, cypress/e2e/tests/loginNegativeScenarios.cy.js]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
