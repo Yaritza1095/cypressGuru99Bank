@@ -7,7 +7,7 @@ jobs:
         test-file: ['login.cy.js', 'loginNegativeScenarios.cy.js']
     runs-on: ubuntu-latest
     env:
-      TEST_PATH: cypressGuru99Bank/cypress/e2e/tests
+      TEST_PATH: cypress/e2e/tests
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
