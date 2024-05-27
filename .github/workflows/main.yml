@@ -4,8 +4,10 @@ jobs:
   test:
     strategy:
       matrix:
-        test-file: [cypress/e2e/tests/login.cy.js, cypress/e2e/tests/loginNegativeScenarios.cy.js]
+        test-file: ['login.cy.js', 'loginNegativeScenarios.cy.js']
     runs-on: ubuntu-latest
+    env:
+      TEST_PATH: /cypress/e2e/tests
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -20,4 +22,4 @@ jobs:
         with:
           config-file: cypress.config.js
           record: false
-          spec: ${{ matrix.test-file }}
+          spec: ${{ env.TEST_PATH }}/${{ matrix.test-file }}
