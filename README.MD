@@ -25,6 +25,16 @@ Test Data: UserId, Password
 Expected Result: Login Successful
 
 Day 2 Task:
+1. Verify the login Section:
+Test case: enter valid user id and password
+Test Steps:
+    1. Go to https://clicks.aweber.com/y/ct/?l=9GJb&m=mqr21DGG7WFEjy9&b=ftyRAGqn86J.zqoUqwX_JA
+    2. Enter valid UserId
+    3. Enter Valid Password
+    4. Click Login
+    5. Verify The Output
+Test Data: UserId, Password
+Expected Result: Login Successful, Verify the Title of The HomePage
 
 Day 3 Task:
 

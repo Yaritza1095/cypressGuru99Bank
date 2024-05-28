@@ -5,6 +5,7 @@ jobs:
     strategy:
       matrix:
         test-file: ['login.cy.js', 'loginNegativeScenarios.cy.js']
+        browser: ['chrome', 'firefox']
     runs-on: ubuntu-latest
     env:
       TEST_PATH: cypress/e2e/tests
@@ -23,3 +24,4 @@ jobs:
           config-file: cypress.config.js
           record: false
           spec: ${{ env.TEST_PATH }}/${{ matrix.test-file }}
+          browser: ${{ matrix.browser }}
