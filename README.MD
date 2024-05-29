@@ -37,6 +37,15 @@ Test Data: UserId, Password
 Expected Result: Login Successful, Verify the Title of The HomePage
 
 Day 3 Task:
+Parametrize Test Scenarios, added the following test cases:
+Invalid User and Valid Password
+Valid User and Invalid Password
+Invalid Password and Invalid User
+Login Reset Button
+Added the test data into the users.xlsx file in the fixtures folder
+
+Note: the website has a bug so unfortunalety you'll have to manually dismiss the browser alerts
+This means that running it through the github pipelines will now work
 
 Day 4 Task:
 
@@ -49,8 +58,7 @@ Day 7 Task:
 Note:
 
 Credentials last 20 days after creation date (5/27/2024), to run the test cases it is recommended you create a new set of credentials here:
-https://demo.guru99.com/ and update them in ../pages/Login.js in the variables userID and password
-
+https://demo.guru99.com/ and update them in ../fixtures/users.xlsx in the A2 and B2 cells
 The first set of credentials generated were:
 user Id: mngr573953
 Password: YhutysY

@@ -1,10 +1,12 @@
 name: End-to-end tests
+
 on: [push]
+
 jobs:
   test:
     strategy:
       matrix:
-        test-file: ['login.cy.js', 'loginNegativeScenarios.cy.js']
+        test-file: ['login.cy.js', 'loginValidUserInvalidPassword.cy.js', 'loginInvalidUserValidPassword.cy.js', 'loginResetButton.cy.js', 'loginInvalidUserInvalidPassword.cy.js']
         browser: ['chrome', 'firefox']
     runs-on: ubuntu-latest
     env:
@@ -12,12 +14,18 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 21
+
       - name: Install dependencies
         run: npm install
+
+      - name: Install xlsx package
+        run: npm install xlsx
+
       - name: Run Cypress tests
         uses: cypress-io/github-action@v4
         with:
