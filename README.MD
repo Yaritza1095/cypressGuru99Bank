@@ -49,7 +49,11 @@ This means that running it through the github pipelines will now work
 
 Day 4 Task:
 
+Task for day 4 was focused to adding annotations with TestNG, not needed since we are using Cypress 
+
 Day 5 Task:
+
+Task for day 5 was also also geared for TestNG.
 
 Day 6 Task:
 
