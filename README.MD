@@ -56,8 +56,12 @@ Day 5 Task:
 Task for day 5 was also also geared for TestNG.
 
 Day 6 Task:
-
+Adding Screenshots after Login
 Day 7 Task:
+Project Closure:
+
+Other scenario suggestions to automate: https://docs.google.com/spreadsheets/d/1WRDwFzHL0bMepIXcAEBPqtGWYvtWtXka0rfG8XamkVU/edit#gid=4
+Project Requirements: https://docs.google.com/document/d/1rPW5DV82VJT6vtA1VDSrfxaCBuAduxW0zb1yfTh_VMk/edit
 
 Note:
 

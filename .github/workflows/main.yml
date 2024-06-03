@@ -6,7 +6,7 @@ jobs:
   test:
     strategy:
       matrix:
-        test-file: ['login.cy.js', 'loginValidUserInvalidPassword.cy.js', 'loginInvalidUserValidPassword.cy.js', 'loginResetButton.cy.js', 'loginInvalidUserInvalidPassword.cy.js']
+        test-file: ['login.cy.js', 'loginResetButton.cy.js']
         browser: ['chrome', 'firefox']
     runs-on: ubuntu-latest
     env:

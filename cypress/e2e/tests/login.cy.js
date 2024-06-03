@@ -24,7 +24,10 @@ describe('Testing login with valid credentials', () => {
           login.getWelcomeMessage().should('be.visible').should('eq', "Welcome To Manager's Page of Guru99 Bank")
         })
       it("should display Manager ID aka User ID", () => {
-        login.getManagerID().should('be.visible').should('eq', "Manger Id : " + credentials.validUser);
+        login.getManagerID().should('be.visible').should('eq', "Manger Id : " + credentials.validUser).then(() => {
+          // The screenshot command here ensures it's only taken after the Manager ID is confirmed visible
+          cy.screenshot('Manager-ID-Visible');
+        })
       })
     })
   })
